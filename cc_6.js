@@ -66,3 +66,15 @@ let discountedOrders = applyBulkDiscount(orders, discountFunction);
 
 console.log(discountedOrders) // [ 200, 540, 1080, 450, 720 ]
 
+//Task 7: Closures
+function createExpenseTracker() {
+    let totalExpenses = 0;
+    
+    return function(amount) {
+        totalExpenses += amount;
+        return `Total Expenses: $${totalExpenses}`;
+    };
+}
+let tracker = createExpenseTracker();
+console.log(tracker(200)); // Expenses should be 200
+console.log(tracker(150)); // expenses should be 350
