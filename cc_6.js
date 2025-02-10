@@ -78,3 +78,14 @@ function createExpenseTracker() {
 let tracker = createExpenseTracker();
 console.log(tracker(200)); // Expenses should be 200
 console.log(tracker(150)); // expenses should be 350
+
+//Task 8: Recursion in JavaScript
+function calculateYearsToPromotion (employeelevel){
+    if (employeelevel >= 10){
+        return 0;
+    }
+    return 2 + calculateYearsToPromotion(employeelevel + 1);
+}
+
+console.log(`Years to Level 10: ${calculateYearsToPromotion(7)}`); // should be level 10:6
+console.log(`Years to Level 10: ${calculateYearsToPromotion(5)}`);// should be level 10:10
