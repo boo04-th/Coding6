@@ -16,3 +16,14 @@ let calculateSalesTax = function(amount, taxRate) {
     calculateSalesTax(100, 0.07); 
     calculateSalesTax(500, 0.1);  
     
+//Task 3: Arrow Function
+let calculateBonus = (salary, performanceRating) => {
+    let bonusPercentage = 0; 
+    if(performanceRating === "Excellent")bonusPercentage = 0.20;
+    else if (performanceRating === "Good")bonusPercentage = 0.10;
+    else if (performanceRating === "Average")bonusPercentage = 0.05;
+    let bonus = salary * bonusPercentage;
+    console.log (`Bonus: $${bonus}`);
+}
+calculateBonus(5000, "Excellent"); // output should be 1000
+calculateBonus(7000, "Good");      // output should be 700
